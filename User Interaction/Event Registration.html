@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration</title>
+</head>
+<body>
+  <h2>Event Registration</h2>
+  <form action="/register" method="get">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="user_name" placeholder="Enter your name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="user_email" placeholder="example@domain.com" required>
+    
+    <label for="event">Select Event:</label>
+    <select id="event" name="event_choice" required>
+      <option value="">Choose an event</option>
+      <option value="coding">Coding Hackathon</option>
+      <option value="webinar">Tech Webinar</option>
+      <option value="workshop">AI Workshop</option>
+    </select>
+    
+    <label for="newsletter">Subscribe to Newsletter:</label>
+    <input type="checkbox" id="newsletter" name="subscribe" value="yes">
+    <label for="newsletter">Yes, keep me updated!</label>
+    
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
