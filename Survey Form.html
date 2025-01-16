@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey Form</title>
+</head>
+<body>
+<h1> Programming Survey Form</h1>
+<form action="/submit-survey" method="post">
+<!---- age Question-->
+
+<label for="age"> What is your age?</label>
+<input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120" required>
+<br> <br>
+<!--Preferred Programming Language-->
+<label for="Language"> What is your preferred programming Language?</label>
+<select id="Language" name="Language" required>
+<option value="">--Select a language--</option>
+<option value="Python">Python</option>
+<option value="javascript">Javascript</option> 
+<option value="java">Java</option> 
+<option value="csharp">csharp</option>
+<option value="cpp">cpp</option>
+<option value="ruby">ruby</option>
+<option value="other">other</option>
+
+</select>
+
+<br><br>
+<!--Additional comments-->
+<label for="comments"> Additional comments:</label>
+<textarea id="comments" name="comments" placeholder="Share your thoughts here....." required></textarea>
+<br><br>
+
+<button type="submit"> submit survey</button>
+
+</form>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
