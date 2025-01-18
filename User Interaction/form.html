@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form</title>
+</head>
+<body>
+    <h1>Accessible Form</h1>
+    <form action="/submit-accessible-form" method="post">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your full name" 
+            aria-required="true" 
+            required>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Enter your email address" 
+            aria-required="true" 
+            required>
+        <br><br>
+
+        <!-- Satisfaction Group -->
+        <fieldset>
+            <legend>How satisfied are you with our service? (1 - 5)</legend>
+            <label>
+                <input type="radio" name="satisfaction" value="1" required> 1
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="2"> 2
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="3"> 3
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="4"> 4
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="5"> 5
+            </label>
+        </fieldset>
+        <br>
+
+        <!-- Message Field -->
+        <label for="message">Message:</label>
+        <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Write your message here" 
+            aria-label="Feedback message" 
+            rows="5" 
+            required></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" aria-label="Submit your feedback">Submit</button>
+    </form>
+</body>
+</html>

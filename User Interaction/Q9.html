@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form with Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Form with Validation</h1>
+    <form id="dynamic-form">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your name" 
+            required>
+        <span class="error" id="name-error">Name is required</span>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required>
+        <span class="error" id="email-error">Email is required</span>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-button" disabled>Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('dynamic-form');
+        const nameField = document.getElementById('name');
+        const emailField = document.getElementById('email');
+        const submitButton = document.getElementById('submit-button');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+
+        // Function to validate form fields
+        function validateForm() {
+            let isValid = true;
+
+            // Check name field
+            if (!nameField.value.trim()) {
+                nameError.style.display = 'inline';
+                isValid = false;
+            } else {
+                nameError.style.display = 'none';
+            }
+
+            // Check email field
+            if (!emailField.value.trim()) {
+                emailError.style.display = 'inline';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            // Enable/disable the submit button
+            submitButton.disabled = !isValid;
+        }
+
+        // Add event listeners to fields for real-time validation
+        nameField.addEventListener('input', validateForm);
+        emailField.addEventListener('input', validateForm);
+
+        // Prevent form submission if fields are invalid
+        form.addEventListener('submit', (event) => {
+            validateForm();
+            if (submitButton.disabled) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

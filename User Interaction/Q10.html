@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload Form</title>
+</head>
+<body>
+    <h1>Upload Your Resume</h1>
+    <form action="/submit-resume" method="post" enctype="multipart/form-data">
+        <!-- File Upload Field -->
+        <label for="resume">Upload your resume:</label>
+        <input 
+            type="file" 
+            id="resume" 
+            name="resume" 
+            accept=".pdf,.doc,.docx" 
+            required>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

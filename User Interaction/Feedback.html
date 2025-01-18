@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+   <h1>Feedback Form</h1> 
+   <form action="/submit-feedback" method="post">
+
+   <!--Satisfaction Rating-->
+   <fieldset>
+    <legend> how satisfied are you? (1-5)</legend>
+    <label>
+        <input type="radio" name="Satisfaction" value="1" required> 1
+    </label>
+    <label >
+        <input type="radio" name="Satisfaction" value="2"> 2
+    </label>
+    <label>
+        <input type="radio" name="Satisfaction" value="3"> 3
+    </label>
+    <label >
+        <input type="radio" name="Satisfaction" value="4"> 4
+    </label>
+    <label >
+        <input type="radio" name="Satisfaction" value="5"> 5
+    </label>
+</fieldset>
+<br><br>
+
+<!--Recommendation Dropdown-->
+  <label for="recommend">Would you recommend us?</label>
+<select name="recommend" name="recommend" required>
+    <option value="disabled selected">Select an option</option>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select>
+<br><br>
+
+<!--Submit Button-->
+<button type="submit">Submit Feedback </button>
+
+</form>
+</body>
+</html>
