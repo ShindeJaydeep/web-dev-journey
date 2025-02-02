@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-In Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+        .menu-btn {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-btn" onclick="ToggleMenu()">☰ Menu</button>
+    <div class="sidebar" id="sidebar">
+        <h2>sidebar menu</h2>
+        <p>Some menu content</p>
+    </div>
+    <script>
+        function ToggleMenu(){
+            document.getElementById(sidebar).classList.toggle("open");
+            
+        }
+    </script>
+</body>
+</html>

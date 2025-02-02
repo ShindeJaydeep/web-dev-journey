@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Example</title>
+</head>
+<style>
+    table {
+        width: 50%;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: lightgray;
+    }
+</style>
+<body>
+    <table>
+        <tr><th>Name</th><th>Age</th></tr>
+        <tr><td>Alice</td><td>25</td></tr>
+        <tr><td>Bob</td><td>30</td></tr>
+        <tr><td>Charlie</td><td>22</td></tr>
+        <tr><td>David</td><td>28</td></tr>
+    </table>
+</body>
+</html>
