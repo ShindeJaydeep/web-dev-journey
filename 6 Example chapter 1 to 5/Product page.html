@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0;}
+        header, footer {background: #333; color: white; text-align: center; padding: 15px;}
+
+        /* css layout */
+        .product-container { display: flex; gap: 20px; padding: 20px;}
+        .product-img { width: 50%;}
+        .product-details {width: 50%;}
+
+        /* Advanced css*/
+        button { background: blue; color: white; padding: 10px; border: none; cursor: pointer;}
+        button:hover { background: darkblue;}
+    </style>
+</head>
+<body>
+    <header><h1>online Store</h1></header>
+
+    <main class="product-container">
+        <img src="product.jpg" class="product-img" alt="product">
+        <div class="product-details">
+            <h2>Product Name</h2>
+            <p>Price: $50</p>
+            <form >
+                <label >Quantity:</label>
+                <input type="number" min="1" value="1">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>@ 2025 My Store</footer>
+</body>
+</html>
